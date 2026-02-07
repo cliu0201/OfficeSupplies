@@ -14,9 +14,9 @@ public class Whiteboard
     /**
      * Constructor for objects of class Whiteboard
      */
-    public Whiteboard(String text, int inkLevel)
+    public Whiteboard(int inkLevel)
     {
-        this.text = text;
+        this.text = "";
         this.inkLevel = inkLevel;
         isClean = true;
     }
@@ -30,7 +30,14 @@ public class Whiteboard
     {
         if (inkLevel > 0)
         {
-            this.text = text;
+            if (this.text.equals(""))
+            {
+                this.text = text;
+            }
+            else
+            {
+                this.text = this.text + ", " + text;
+            }
             isClean = false;
             inkLevel = inkLevel - 1;
         }
