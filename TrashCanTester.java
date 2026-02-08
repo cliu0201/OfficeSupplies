@@ -3,7 +3,7 @@
  * This is a Tester for the TrashCan class
  *
  * @author Cici Liu & Hera Yuan
- * @version 07-02-2026
+ * @version 02-07-2026
  */
 public class TrashCanTester
 {
