@@ -6,7 +6,6 @@
  */
 public class Whiteboard
 {
-    // instance variables - replace the example below with your own
     private String text;
     private int inkLevel;
     private boolean isClean;
@@ -49,7 +48,6 @@ public class Whiteboard
     
     /**
      * The erase method erases the text on the whiteboard.
-     *
      */
     public void erase()
     {
@@ -86,7 +84,6 @@ public class Whiteboard
     
     /**
      * The newMarker class replaces the dry marker with a new marker with full ink level.
-     *
      */
     public void newMarker()
     {
@@ -94,9 +91,8 @@ public class Whiteboard
     }
     
     /**
-     * An example of a method - replace this comment with your own
+     * The displayInkLevel method returns the inkLevel amount.
      *
-     * @param  y  a sample parameter for a method
      * @return  inkLevel the level of ink the marker is at.
      */
     public int displayInkLevel()
