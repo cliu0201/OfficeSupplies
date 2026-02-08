@@ -4,7 +4,7 @@
  * and tracks the current amount of trash inside it.
  *
  * @author Cici Liu & Hera Yuan
- * @version 06-02-2026
+ * @version 02-07-2026
  */
 public class TrashCan
 {
