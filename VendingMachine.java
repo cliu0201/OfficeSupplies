@@ -18,7 +18,7 @@ public class VendingMachine
     private double moneyReceived;
     
     /**
-     * Constructor for objects of class VendingMachine
+     * Constructs a VendingMachine with all items stocked at 3 and no money inserted
      */
     public VendingMachine()
     {
@@ -34,11 +34,11 @@ public class VendingMachine
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * The insertMoney method adds money to the vending machine balance if the amount is valid
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param  amount  the amount of money the vending machine received
      */
+    
     public void insertMoney(double amount)
     {
         if (amount > 0)
@@ -52,15 +52,16 @@ public class VendingMachine
     }
     
     /**
-     * An example of a method - replace this comment with your own
+     * The selectItem method allows the user to select an item to purchase. If the item exists, 
+     * is in stock, and there is enough money inserted, the item is dispensed.
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param  item  the name of the snack or drink selected
      */
+    
     public void selectItem(String item)
     {
         double price = getPrice(item);
-        if (price == -1)
+        if (price == -1) //explains in next method
         {
             System.out.println("Invalid item.");
         }
@@ -113,11 +114,12 @@ public class VendingMachine
     }
     
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * The getPrice method returns the price of a given item.
+     * 
+     * @param  item the name of the snack or drink selected
+     * @return the price of the item or -1 if item selected does not exist
      */
+    
     public double getPrice(String item)
     {
         if (item.equals("Doritos") || item.equals("Pringles") ||
@@ -141,11 +143,12 @@ public class VendingMachine
     }
     
     /**
-     * An example of a method - replace this comment with your own
+     * The giveChange method returns any remaining balance as change
+     * and resets the money balance to zero.
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @return change the amount of change returned
      */
+    
     public double giveChange()
     {
         double change = moneyReceived;
@@ -154,10 +157,8 @@ public class VendingMachine
     }
     
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * The restock method restocks all items in the vending machine
+     * back to their original quantity.
      */
     public void restock()
     {
@@ -172,10 +173,8 @@ public class VendingMachine
     }
     
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * The getInventory method prints the current inventory count
+     * for each item currently in the vending machine.
      */
     public void getInventory()
     {
