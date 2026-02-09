@@ -1,0 +1,47 @@
+/**
+ * Tester for the VendingMachine Class
+ *
+ * Cici Liu and Hera Yuan
+ * 02-09-2026
+ */
+public class VendingMachineTester
+{
+    public static void main(String[] args)
+    {
+        VendingMachine machine = new VendingMachine();
+        System.out.println("Fully Stocked Inventory:");
+        machine.getInventory();
+        System.out.println();
+        System.out.println("Select item to see price.");
+        System.out.println("Selected Twix.");
+        System.out.println("Price: $" + machine.getPrice("Twix"));
+        System.out.println();
+        System.out.println("Insert money then select item.");
+        machine.insertMoney(5.0);
+        System.out.println("Money inserted: 5.0");
+        System.out.println();
+        System.out.println("Selected Doritos.");
+        machine.selectItem("Doritos");
+        System.out.println("Selected Coke.");
+        machine.selectItem("Coke");
+        System.out.println("Selected Gum. (Expect error)");
+        machine.selectItem("Gum");
+        System.out.println("Selected Water.(Expect invalid funds)");
+        machine.selectItem("Water");
+        machine.insertMoney(3.0);
+        System.out.println("Money inserted: 3.0");
+        System.out.println("Selected Water.");
+        machine.selectItem("Water");
+        System.out.println();
+        double change = machine.giveChange();
+        System.out.println("Returning change. (Expect $2.0 return)");
+        System.out.println("Change returned: $" + change);
+        System.out.println();
+        System.out.println("Inventory After Purchases:");
+        machine.getInventory();
+        machine.restock();
+        System.out.println();
+        System.out.println("Inventory After Restock:");
+        machine.getInventory();
+    }
+}
